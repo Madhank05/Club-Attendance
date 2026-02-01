@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YMC GCT | Attendance</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>YMC GCT</h1>
+    <p class="subtitle">Event Attendance Registration</p>
+
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+
+    <!-- HTML-only form submission to Google Form -->
+    <form 
+      action="https://docs.google.com/forms/d/e/1FAIpQLScRwtT8HHGMTNXDd2WH7kWS2J-cU7NW0R0lXBwp0txR-m3grg/formResponse"
+      method="POST" 
+       target="hidden_iframe"
+      onsubmit="redirectSuccess()">
+
+      <input type="text" name="entry.557152668" placeholder="Roll Number" required>
+      <input type="text" name="entry.1734875969" placeholder="Student Name (CAPITAL LETTERS)" required pattern="[A-Z\s]+" >
+      <select name="entry.183214575" required>
+    <option value="">Select Department</option>
+    <option value="CSE">CSE</option>
+    <option value="IT">IT</option>
+    <option value="MECHANICAL">MECHANICAL</option>
+    <option value="CIVIL">CIVIL</option>
+    <option value="EIE">EIE</option>
+    <option value="EEE">EEE</option>
+    <option value="ECE">ECE</option>
+    <option value="IBT">IBT</option>
+    <option value="PRODUCTION">PRODUCTION</option>
+</select>
+
+
+      <select name="entry.1299648066" required>
+        <option value="">Select Year</option>
+        <option value="II">II</option>
+        <option value="III">III</option>
+        <option value="IV">IV</option>
+      </select>
+      <input type="text" name="entry.1021675466" placeholder="Phone Number" required>
+      <input type="email" name="entry.301355236" placeholder="Email" required>
+<select name="entry.1226323649" required>
+    <option value="">Select Event Name</option>
+    <option value="CONSTRUCTA">CONSTRUCTA</option>
+    <option value="ELECTRO HUNT">ELECTRO HUNT</option>
+    <option value="SPEAK UP">SPEAK UP</option>
+    <option value="CODE QUIZ ARENA">CODE QUIZ ARENA</option>
+    <option value="MECH AXIS">MECH AXIS</option>
+    <option value="CODE CRYPT">CODE CRYPT</option>
+    <option value="THINK LINK">THINK LINK</option>
+    <option value="ARCHOVA">ARCHOVA</option>
+    <option value="LOGIC LABYRINTH">LOGIC LABYRINTH</option>
+    <option value="BIO TREASURE TRACE">BIO TREASURE TRACE</option>
+    <option value="VISUAL TO VIRTUAL">VISUAL TO VIRTUAL</option>
+    <option value="DIGIBYTE">DIGIBYTE</option>
+</select>
+
+
+
+      <button type="submit">Submit Attendance</button>
+    </form>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 YMC GCT. All Rights Reserved.</p>
+    <p>Developed by <strong>Madhan Kumar</strong></p>
+    <p>Team <strong>Copper Blaze</strong></p>
+  </footer>
+
+   <script>
+    function redirectSuccess() {
+      // Redirect to success.html after form submission
+      setTimeout(() => {
+        window.location.href = "success.html";
+      }, 500); // small delay to allow form submission
+    }
+  </script>
+</body>
+</html>
